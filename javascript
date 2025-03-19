@@ -6,7 +6,7 @@ export default function App(){
   const [ carregando, setCarregando] = useState(true);
 
   useEffect(() => {
-    carregarCidades();
+    carregarPaises();
   }, []);
 
   const carregarPaises = async () => {
@@ -15,14 +15,14 @@ export default function App(){
       const data = await response.json();
       setCidades(data);
     }catch (error){
-      console.error('Erro ao carregar cidades: ', error);
+      console.error('Erro ao carregar paises: ', error);
     } finally{
       setCarregando(false);
     }
   };
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Cidades</Text>
+      <Text style={styles.title}>Paises</Text>
       {carregando ? (
         <ActivityIndicator size="large" color="#0000ff"/>
       ) : (
