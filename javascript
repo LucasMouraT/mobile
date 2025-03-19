@@ -13,7 +13,7 @@ export default function App(){
     try{
       const response = await fetch('https://servicodados.ibge.gov.br/api/v1/paises/indicadores/{indicadores}');
       const data = await response.json();
-      setCidades(data);
+      setPaises(data);
     }catch (error){
       console.error('Erro ao carregar paises: ', error);
     } finally{
