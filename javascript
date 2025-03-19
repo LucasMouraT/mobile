@@ -27,7 +27,7 @@ export default function App(){
         <ActivityIndicator size="large" color="#0000ff"/>
       ) : (
         <FlatList
-        data={cidades}
+        data={paises}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
           <View style = {styles.item}>
